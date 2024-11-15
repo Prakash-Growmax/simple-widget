@@ -1,5 +1,5 @@
 (function() {
-    // Create the widget HTML
+    // Create widget HTML and functionality
     function createWidget() {
         const widget = document.createElement("div");
         widget.innerHTML = `
@@ -114,6 +114,13 @@
             }
         }
     };
-})();
 
- window.FabWidget.init()
+    // Auto-initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            window.FabWidget.init();
+        });
+    } else {
+        window.FabWidget.init();
+    }
+})();
