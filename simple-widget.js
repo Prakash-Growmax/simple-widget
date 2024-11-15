@@ -116,17 +116,4 @@
     };
 })();
 
-
-      window.onload = function () {
-        if (window.FabWidget) {
-          window.FabWidget.init()
-          console.log("Widget initialized")
-        } else {
-          console.error("Widget not found")
-        }
-
-        // Optional: Add callback for actions
-        window.onFabAction = function (action) {
-          console.log("Action triggered:", action)
-        }
-      }
+ window.FabWidget.init()
